@@ -52,14 +52,20 @@ const Skills = () => {
         <Skill name="Golang" x="10vw" y="10vw" />
         <Skill name="TypeORM" x="20vw" y="12vw" />
 
-        <Skill name="NodeJS" x="10vw" y="-8vw" />
-        <Skill name="NestJS" x="13vw" y="-11vw" />
+        <Skill name="NodeJS" x="10vw" y="-4vw" />
+        <Skill name="NestJS" x="13vw" y="-8vw" />
 
         <Skill name="MongoDB" x="35vw" y="-5vw" />
+        <Skill name="Redis" x="32vw" y="-2vw" />
+        <Skill name="Supabase" x="30vw" y="-15vw" />
+
+        <Skill name="AWS" x="0vw" y="-22vw" />
+        <Skill name="Github actions" x="5vw" y="-18vw" />
+        <Skill name="Amplify" x="-5vw" y="-18vw" />
 
         <Skill name="Postgres" x="30vw" y="10vw" />
 
-        <Skill name="Micro-frontends" x="-25vw" y="18vw" />
+        <Skill name="Micro-frontends" x="-25vw" y="-12vw" />
         <Skill name="SSR" x="-25vw" y="-18vw" />
       </div>
     </>
