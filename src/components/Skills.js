@@ -55,6 +55,8 @@ const Skills = () => {
         <Skill name="NodeJS" x="10vw" y="-4vw" />
         <Skill name="NestJS" x="13vw" y="-8vw" />
 
+        <Skill name="Typescript" x="-10vw" y="5vw" />
+
         <Skill name="MongoDB" x="35vw" y="-5vw" />
         <Skill name="Redis" x="32vw" y="-2vw" />
         <Skill name="Supabase" x="30vw" y="-15vw" />
