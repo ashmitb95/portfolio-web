@@ -1,0 +1,94 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+h3.flip-animate {
+  perspective: 1000px;
+  text-align: left;
+}
+
+h3 ul {
+  margin: 0px;
+  margin-left: 3px;
+  display: inline;
+  padding: 0px;
+  list-style-type: none;
+}
+
+h3.flip-animate .adjective {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  transition: transform 0.3s;
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+}
+
+h3.flip-animate .adjective:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: attr(data-hover);
+  transition: color 0.3s;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0;
+  text-align: left;
+
+  min-width: 210px;
+}
+
+/* h3.flip-animate:hover span,
+  h3.flip-animate:focus span {
+    transform: rotateX(90deg) translateY(-22px);
+  } */
+
+/* h3.flip-animate:hover span:before,
+  h3.flip-animate:focus span:before {
+    color: rgb(210, 73, 54);
+  } */
+
+.notFlipped {
+  max-width: 0px;
+  /* visibility: hidden; */
+  opacity: 0;
+  transition: 1s;
+}
+
+.adjective-list-hover .adjective:before {
+  visibility: hidden;
+}
+
+.flipped {
+  max-width: 80%;
+  min-width: 200px;
+  opacity: 1;
+  transform: rotateX(90deg) translateY(-22px);
+}
+
+.adjective.flipped:before {
+  color: rgb(210, 73, 54);
+  max-width: 100%;
+}
+
+/* .adjective-list-hover {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 3px;
+
+  position: absolute;
+  top: -0.85em;
+} */
+
+/* .adjective-list-hover .adjective:hover {
+  color: rgb(210, 73, 54);
+} */
+
+.adjective-list-container {
+  position: relative;
+  min-width: 210px;
+  display: inline-flex;
+}
