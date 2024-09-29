@@ -14,14 +14,12 @@ import ReactTextTransition, { presets } from "react-text-transition";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const texts = [
-  "a Software Engineer",
-  "an Overthinker",
-  "a Developer",
-  "a Code Reviewer",
-  "a Foodie",
-  "an Interviewer",
-  "a Gamer",
-  "a Unit Tester",
+  "a software engineer",
+  "a Helldiver",
+  "a team player",
+  "an overthinker",
+  "a unit tester",
+  "a foodie",
 ];
 
 export default function Home() {
@@ -83,18 +81,32 @@ export default function Home() {
                       style={{ margin: "0 4px", color: "red" }}
                       inline
                     >
-                      {texts[textIndex]}
+                      {texts[textIndex].toLowerCase().includes("helldiver") ? (
+                        <a
+                          target="_blank"
+                          href="https://video.akamai.steamstatic.com/store_trailers/256994373/movie480_vp9.webm?t=1705428404"
+                          className="underline decoration-red"
+                        >
+                          {texts[textIndex]}
+                        </a>
+                      ) : (
+                        texts[textIndex]
+                      )}
                     </ReactTextTransition>
                   </section>
                 </section>
               </div>
-              <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
+              <p className="mt-4 mb-2 text-base font-medium md:text-sm sm:!text-xs">
                 I have been working as a fullstack developer for six years in
-                product based startups, and truely love my work when I am
-                building a product that happens to be a delight for its users,
-                no matter the domain space or target audience. Feel free to
-                reach out to me if you would like to know more about how I can
-                help you!
+                product companies, and truely love my work when I am building
+                something that is a delight for its users, or feels effortless
+                to use, no matter the domain space or target audience. I am
+                largely language-agnostic, and have mostly been a jack of
+                multiple trades over the course of my short career so far.
+              </p>
+              <p className="mb-8">
+                Feel free to reach out to me if you would like to know more
+                about how I can help you!
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link

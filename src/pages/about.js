@@ -61,13 +61,13 @@ export default function About() {
               {/* <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 BIOGRAPHY
               </h2> */}
-              <p className="font-medium ">
+              <p className="font-medium text-center">
                 Hi, am <strong>Ashmit</strong>, a gamer moonlighting as a web
                 developer from India, with a drive for chaos and a passion for
                 creating functional, user-centered digital experiences that go
                 beyond just solving problems, but also are convenient for users
               </p>
-              <p className="my-4 font-medium">
+              <p className="my-4 font-medium text-center">
                 I believe in function over form, and as such, my proficiencies
                 are more towards engineering the wires behind that make UIs work
                 better, rather than making them look better. I might not always
@@ -75,10 +75,11 @@ export default function About() {
                 make up for that with my eye for detail in product requirments,
                 user experiences considerations, and technical nuances.
               </p>
-              <p className="font-medium">
+              <p className="font-medium text-center">
                 I thrive in chaos! The mundane gets me bored very easily. I like
                 moderately fast-paced environments where iteration and
-                improvement is the ideaology behind engineering decisions
+                improvement is the ideaology behind engineering decisions. Just
+                please no friday deployments!
               </p>
             </div>
             <div
