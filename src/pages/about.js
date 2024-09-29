@@ -32,6 +32,12 @@ function AnimatedNumberFramerMotion({ value }) {
   return <span ref={ref} />;
 }
 
+const date1 = new Date("07-21-2024");
+const date2 = new Date();
+
+let DifferenceInTime = date2.getTime() - date1.getTime();
+let DifferenceInDays = Math.round(DifferenceInTime / (1000 * 3600 * 24));
+
 export default function About() {
   return (
     <>
@@ -65,7 +71,8 @@ export default function About() {
                 Hi, am <strong>Ashmit</strong>, a gamer moonlighting as a web
                 developer from India, with a drive for chaos and a passion for
                 creating functional, user-centered digital experiences that go
-                beyond just solving problems, but also are convenient for users
+                beyond just solving problems by being convenient and effortless
+                to use.
               </p>
               <p className="my-4 font-medium text-center">
                 I believe in function over form, and as such, my proficiencies
@@ -152,7 +159,7 @@ export default function About() {
 
               <div className="flex flex-col items-center justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  {">"} <AnimatedNumberFramerMotion value={90} />
+                  {">"} <AnimatedNumberFramerMotion value={DifferenceInDays} />
                 </span>
                 <h2
                   className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 

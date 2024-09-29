@@ -74,10 +74,10 @@ const Experience = () => {
           />
 
           <Details
-            position="Software Developer Engineer"
+            position="Software Development Engineer"
             company="Bookmyshow"
             companyLink="https://in.bookmyshow.com"
-            time="2018-2021"
+            time="October 2019- September 2021"
             address="Mumbai, India"
             work="Worked as part of the Bookmyshow International team, implementing the entire product stack for UAE and Sri Lanka. Responible for maintaining and improving multiple microservices"
           />
@@ -86,8 +86,8 @@ const Experience = () => {
             position="Associate Software Developer"
             company="Leadquared"
             companyLink="https://leadsquared.com"
-            time="Summer 2019"
-            address="Redmond, WA."
+            time="January 2018 - April 2019"
+            address="Bengaluru, India"
             work="Build a dynamic forms and workflow engine powering field sales teams to expedite lead status updates and increas conversion"
           />
         </ul>
