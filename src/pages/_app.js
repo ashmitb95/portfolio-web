@@ -3,14 +3,14 @@ import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 // pages/_app.js
-import { Montserrat } from "next/font/google";
+import { Nunito, Quicksand } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import "./styles.css";
 
 // If loading a variable font, you don't need to specify the font weight
-const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
-
+const nunito = Nunito({ subsets: ["latin"], variable: "--font-mont" });
+const poiret = Quicksand({ subsets: ["latin"], variable: "--font-poit" });
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${montserrat.variable} font-mont  bg-light dark:bg-dark w-full min-h-screen h-full`}
+        className={`${nunito.variable} font-mont ${poiret.variable} font-poit bg-light dark:bg-dark w-full min-h-screen h-full`}
       >
         <Navbar />
         <AnimatePresence initial={false} mode="wait">

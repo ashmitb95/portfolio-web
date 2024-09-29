@@ -55,7 +55,7 @@ export default function About() {
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div
-              className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
+              className="col-span-3 leading-8 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8"
             >
               {/* <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
@@ -151,13 +151,13 @@ export default function About() {
 
               <div className="flex flex-col items-center justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  {"<"} <AnimatedNumberFramerMotion value={200} />
+                  {">"} <AnimatedNumberFramerMotion value={90} />
                 </span>
                 <h2
                   className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm"
                 >
-                  bugs induced in code
+                  days since last production issue
                 </h2>
               </div>
             </div>

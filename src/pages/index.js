@@ -14,21 +14,18 @@ import ReactTextTransition, { presets } from "react-text-transition";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const texts = [
-  "a Software engineer",
+  "a Software Engineer",
   "an Overthinker",
   "a Developer",
-  "a code reviewer",
+  "a Code Reviewer",
   "a Foodie",
   "an Interviewer",
   "a Gamer",
-  "a unit tester",
+  "a Unit Tester",
 ];
 
 export default function Home() {
-  const [randomIndex, setRandomIndex] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
-  const [textFastIndex, setTextFastIndex] = useState(0);
-  const [paragraphIndex, setParagraphIndex] = useState(0);
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -55,7 +52,7 @@ export default function Home() {
         className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
-          <div className="flex w-full items-start justify-between md:flex-col">
+          <div className="flex w-full items-center mb-80 justify-between md:flex-col">
             <div className="w-4/12 flex justify-center items-center ">
               {/* <Avatar
                 size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
@@ -71,7 +68,7 @@ export default function Home() {
                 style={{ borderRadius: "40%" }}
               />
             </div>
-            <div className="flex w-1/2 flex-col items-start self-center lg:w-full lg:text-center">
+            <div className="flex w-1/2 mt-12 flex-col items-start self-center lg:w-full lg:text-center">
               <AnimatedText
                 text="Hello! I am Ashmit!"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
@@ -93,10 +90,11 @@ export default function Home() {
               </div>
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
                 I have been working as a fullstack developer for six years in
-                product based startups, and only now have realised that I could
-                do with a website that is easier to browse or link in
-                applications I make online. So welcome! I hope I have a skillset
-                you are looking for!
+                product based startups, and truely love my work when I am
+                building a product that happens to be a delight for its users,
+                no matter the domain space or target audience. Feel free to
+                reach out to me if you would like to know more about how I can
+                help you!
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
