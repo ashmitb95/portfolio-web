@@ -116,7 +116,7 @@ export default function About() {
                 </span>
                 <h2
                   className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm"
+                xl:text-center text-center md:text-lg sm:text-base xs:text-sm"
                 >
                   hair lost deploying on fridays
                 </h2>

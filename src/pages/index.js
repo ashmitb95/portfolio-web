@@ -8,10 +8,37 @@ import Link from "next/link";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/dev-1.png";
 import TransitionEffect from "@/components/TransitionEffect";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 
 import { motion, AnimatePresence } from "framer-motion";
+import MediaQuery from "react-responsive";
+
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
 
 export const texts = [
   "a software engineer",
@@ -34,6 +61,8 @@ export default function Home() {
       clearInterval(interval);
     };
   }, []);
+
+  const isMobile = useMediaQuery(768);
 
   return (
     <>
@@ -71,11 +100,10 @@ export default function Home() {
                 text="Hello! I am Ashmit!"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
-              <div className="flex flex-row">
-                {/* <h3 className="mr-2"></h3> */}
-                <section>
-                  <section className="inline text-4xl">
-                    I am{" "}
+              {!isMobile ? (
+                <div className="flex flex-row">
+                  <section className="text-4xl inline-flex gap-2 items-baseline ">
+                    <div>I am{"  "}</div>
                     <ReactTextTransition
                       springConfig={presets.gentle}
                       style={{ margin: "0 4px", color: "red" }}
@@ -94,8 +122,10 @@ export default function Home() {
                       )}
                     </ReactTextTransition>
                   </section>
-                </section>
-              </div>
+                </div>
+              ) : (
+                <></>
+              )}
               <p className="mt-4 mb-2 text-base font-medium md:text-sm sm:!text-xs">
                 I have been working as a fullstack developer for six years in
                 product companies, and truely love my work when I am building
@@ -104,7 +134,7 @@ export default function Home() {
                 largely language-agnostic, and have mostly been a jack of
                 multiple trades over the course of my short career so far.
               </p>
-              <p className="mb-8">
+              <p className="mb-8 md:text-sm sm:!text-xs">
                 Feel free to reach out to me if you would like to know more
                 about how I can help you!
               </p>
